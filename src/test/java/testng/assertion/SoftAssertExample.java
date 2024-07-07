@@ -24,6 +24,7 @@ public class SoftAssertExample {
         WebElement userNameTextBox = driver.findElement(By.xpath("//input[starts-with(@name,'name')]"));
         softAssert.assertTrue(userNameTextBox.isDisplayed(), "user name text box should be displayed..");
         softAssert.assertAll();
+        driver.close();
     }
 
     @Test
