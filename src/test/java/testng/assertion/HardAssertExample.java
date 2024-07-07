@@ -21,6 +21,6 @@ public class HardAssertExample {
         Assert.assertEquals(textTitle, "create a Rediffmail account", "Text should be Create a Rediffmail account");
         WebElement userNameTextBox = driver.findElement(By.xpath("//input[@name='nameb5a75370']"));
         Assert.assertTrue(userNameTextBox.isDisplayed(), "user name text box should be displayed..");
-        driver.close();
+        System.out.println("Hello Everyone, Good Morning...");
     }
 }
