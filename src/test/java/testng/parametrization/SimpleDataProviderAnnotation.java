@@ -29,7 +29,6 @@ public class SimpleDataProviderAnnotation {
         driver.manage().window().maximize();
         WebElement searchTextBox = driver.findElement(By.name("q"));
         searchTextBox.sendKeys(courseName + " " + cityName);
-        searchTextBox.sendKeys(Keys.ENTER);
-        Thread.sleep(3000);
+        searchTextBox.sendKeys(Keys.ENTER);;
     }
 }
