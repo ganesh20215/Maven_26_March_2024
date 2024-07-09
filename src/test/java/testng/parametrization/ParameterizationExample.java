@@ -45,6 +45,5 @@ public class ParameterizationExample {
         searchTextBox.sendKeys(courseName + " " + cityName);
         searchTextBox.sendKeys(Keys.ENTER);
         Thread.sleep(3000);
-        driver.close();
     }
 }
