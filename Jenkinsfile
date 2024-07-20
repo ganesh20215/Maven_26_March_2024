@@ -1,32 +1,11 @@
+/* Requires the Docker Pipeline plugin */
 pipeline {
-    agent any
+    agent { docker { image 'maven:3.9.8-eclipse-temurin-21-alpine' } }
     stages {
-        stage('Build') {
+        stage('build') {
             steps {
-                echo 'Build World'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploy World'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Test World'
-            }
-        }
-		stage('Report') {
-            steps {
-                echo 'Result Report Genrationa'
+                sh 'mvn --version'
             }
         }
     }
-	post
-	{
-		always
-		{
-			emailext body: 'Summary', subject: 'Pipeline Status', to: 'ganesh20215@gmail.com'
-		}
-	}
 }
